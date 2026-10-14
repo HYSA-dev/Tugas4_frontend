@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tugas 4 - Form Interaktif Produk UMKM</title>
+  <script src="assets/js/form_handler.js" defer></script>
+</head>
+<body>
+  <section class="card form-section">
+    <h2>Tambah Produk Baru</h2>
+
+    <!-- \novalidate agar tidak muncul pop up -->
+    <form id="product-form" novalidate>
+      <div class="form-group">
+        <label for="product-name">Nama Produk:</label>
+        <input type="text" id="product-name" placeholder="Contoh: Keyboard RGB">
+      </div>
+
+      <div class="form-group">
+        <label for="product-category">Kategori:</label>
+        <select id="product-category">
+          <option value="">-- Pilih Kategori --</option>
+          <option value="Makanan">Makanan</option>
+          <option value="Minuman">Minuman</option>
+          <option value="Pakaian">Pakaian</option>
+          <option value="Aksesori">Aksesori</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="product-price">Harga (Rp):</label>
+        <input type="number" id="product-price" placeholder="Contoh: 350000">
+      </div>
+
+      <div class="form-group">
+        <label for="product-stock">Stok:</label>
+        <input type="number" id="product-stock" placeholder="Contoh: 10">
+      </div>
+
+      <p style="margin-top: 10px;">
+        <strong>Live Preview:</strong> <span id="preview-text">-</span>
+      </p>
+
+      <button type="submit" class="btn btn-primary">Simpan ke Mock Data</button>
+    </form>
+
+    <!-- Tempat Pesan Feedback Teks (Modul 4) -->
+    <div id="form-feedback" class="feedback-msg"></div>
+  </section>
+</body>
+</html>
